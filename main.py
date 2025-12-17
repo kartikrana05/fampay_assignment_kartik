@@ -5,7 +5,7 @@ from src.writer import write_output
 
 
 def main():
-    df = load_data("data/output_file.csv")
+    df = load_data("input_data/input_file.csv")
 
     for ticker, tdf in df.groupby("ticker"):
         monthly = calculate_monthly_ohlc(tdf)
